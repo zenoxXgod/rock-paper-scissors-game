@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f7cac9, #92a8d1);
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .choice-btn {
+      padding: 15px 25px;
+      font-size: 22px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .choice-btn:hover {
+      transform: scale(1.1);
+    }
+
+    #result, #score {
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .fade {
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>🪨📄✂️ Rock Paper Scissors</h1>
+  
+  <button class="choice-btn" onclick="playGame('rock')">🪨 Rock</button>
+  <button class="choice-btn" onclick="playGame('paper')">📄 Paper</button>
+  <button class="choice-btn" onclick="playGame('scissors')">✂️ Scissors</button>
+
+  <div id="result" class="fade"></div>
+  <div id="score">You: 0 | Computer: 0</div>
+</body>
+</html>
+
